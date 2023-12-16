@@ -4,6 +4,7 @@ import com.example.post_service.entity.Post;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Repository
@@ -12,5 +13,9 @@ public class PostRepository {
 
     public void addPost(Post post) {
         posts.add(post);
+    }
+
+    public Collection<Post> findAll() {
+        return posts;
     }
 }
